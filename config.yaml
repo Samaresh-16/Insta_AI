@@ -1,0 +1,43 @@
+# AI Video Pipeline Configuration
+# Copy this to config.local.yaml and fill in your credentials
+
+# Higgsfield API Configuration
+higgsfield:
+  api_key: ""  # Get from https://higgsfield.ai
+  base_url: "https://api.higgsfield.ai/v1"
+  model: "higgsfield-video-v1"  # or specific model name
+
+# Instagram / Meta Graph API Configuration
+instagram:
+  app_id: ""           # From Meta Developer Console
+  app_secret: ""       # From Meta Developer Console
+  access_token: ""     # Long-lived user access token
+  business_account_id: ""  # Your Instagram Business Account ID
+  # For token refresh:
+  refresh_token: ""    # Optional: for automatic token refresh
+
+# Pipeline Settings
+pipeline:
+  video_output_dir: "./output/videos"
+  temp_dir: "./temp"
+  max_video_duration_seconds: 60
+  default_aspect_ratio: "9:16"  # Instagram Reels format
+  default_fps: 30
+
+# Interaction Management
+interactions:
+  auto_reply_enabled: true
+  auto_reply_templates:
+    - "Thanks for watching! 🙏"
+    - "Appreciate the support! ❤️"
+    - "Glad you liked it! 😊"
+  engagement_keywords: ["love", "amazing", "great", "awesome", "cool", "fire", "🔥", "❤️"]
+  engagement_cooldown_minutes: 30  # Don't engage with same user too frequently
+  analytics_retention_days: 90
+
+# Logging
+logging:
+  level: "INFO"
+  file: "./logs/pipeline.log"
+  max_size_mb: 10
+  backup_count: 5

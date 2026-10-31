@@ -1,0 +1,50 @@
+# AI Video Pipeline - Git Ignore
+
+# Configuration with secrets
+config.local.yaml
+.env
+.env.local
+
+# Generated content
+output/
+temp/
+data/
+logs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+.venv/
+venv/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Distribution
+dist/
+build/
+*.egg-info/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Video files (large)
+*.mp4
+*.mov
+*.avi
+*.mkv
